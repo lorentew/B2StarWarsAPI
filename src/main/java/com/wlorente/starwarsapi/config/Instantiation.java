@@ -26,8 +26,9 @@ public class Instantiation implements CommandLineRunner {
 		userReposiroty.deleteAll();
 		
 		Planeta terra = new Planeta(null, "Planeta Terra", "Tropical","Montanhoso",25);
+		Planeta marte = new Planeta(null, "Planeta Marte", "Arido","Montanhoso",11);
 		
-		userReposiroty.saveAll(Arrays.asList(terra));
+		userReposiroty.saveAll(Arrays.asList(terra,marte));
 
 		userReposiroty.save(terra);
 	}

@@ -26,10 +26,9 @@ public class PlanetaService {
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
 	}
 	
-	//public Planeta findByNome(String nome) {
-	//	Optional<Planeta> obj = Optional.of(repo.searchNome(nome));
-	//	return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
-	//}
+	public List<Planeta> findByNome(String text) {
+		return repo.findByNomeContainingIgnoreCase(text);
+	}
 
 	public Planeta insert(Planeta obj) {
 		return repo.insert(obj);
